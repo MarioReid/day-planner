@@ -13,9 +13,8 @@ var timeOfDay = [
     {twelveHour: "2PM", twentyFourHour: "14PM", hour: 14},
     {twelveHour: "3PM", twentyFourHour: "15PM", hour: 15},
     {twelveHour: "4PM", twentyFourHour: "16PM", hour: 16},
-    {twelveHour: "5PM", twentyFourHour: "17PM", hour: 17},
-    {twelveHour: "6PM", twentyFourHour: "18PM", hour: 18},
-    {twelveHour: "7PM", twentyFourHour: "19PM", hour: 19}];
+    {twelveHour: "5PM", twentyFourHour: "17PM", hour: 17}]
+ 
     
 //sets time
 var currentTime = moment().format("H");
