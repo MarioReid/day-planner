@@ -38,8 +38,9 @@ row.append(hour);
 var textArea = $("<textarea>");
 
 // setter methods
-textArea.attr('data-hour', timeOfDay[i].hour);
+textArea.attr("id", timeOfDay[i].hour);
 // add past present future
+
 if(currentTime > timeOfDay[i].hour) {
     textArea.addClass("past description col-10");
 } else if(currentTime == timeOfDay[i].hour) {
@@ -48,24 +49,35 @@ if(currentTime > timeOfDay[i].hour) {
     textArea.addClass("future description col-10");
 }
 
+// getter from local storage
+var valueFromStorage = window.localStorage.getItem("hour-"+timeOfDay[i].hour);
+
+textArea.val(valueFromStorage);
+
 row.append(textArea);
 //create button
 var button = $("<button>");
 button.text
 //added the icon to button
 button.addClass("saveBtn col-1 far fa-save");
-button.attr('data-hour', timeOfDay[i].hour);
+button.attr("data-hour", timeOfDay[i].hour);
 row.append(button);
 //Append to row
 $(".container").append(row);
 }
 //Add event listener
-$(document).on('click', function(event) {
+$(document).on("click", function(event) {
 
-    if($(event.target).hasClass('saveBtn')) {
+    // if save button was clicked
+    if($(event.target).hasClass("saveBtn")) {
+     //target buttons with save btn class   
+        var dataHour = $(event.target).attr("data-hour");
+    //gets the data hour for the button clicked
+        var textValue = $('#' + dataHour).val();
 
-        var dataHour = $(event.target).attr('data-hour');
+        // console.log(textValue);
 
-        console.log(dataHour)
+        // setter
+        window.localStorage.setItem("hour-"+dataHour, textValue);
     }
 })
