@@ -20,8 +20,9 @@ var timeOfDay = [
 //sets time
 var currentTime = moment().format("H");
 
-console.log(currentTime);
+//console.log(currentTime);
 
+// for loop for time of day
 for (i = 0; i < timeOfDay.length; i++){
     console.log("The row is being created.")
 //create row
@@ -36,6 +37,9 @@ row.append(hour);
 //create text area column
 var textArea = $("<textarea>");
 
+// setter methods
+textArea.attr('data-hour', timeOfDay[i].hour);
+// add past present future
 if(currentTime > timeOfDay[i].hour) {
     textArea.addClass("past description col-10");
 } else if(currentTime == timeOfDay[i].hour) {
@@ -48,8 +52,20 @@ row.append(textArea);
 //create button
 var button = $("<button>");
 button.text
+//added the icon to button
 button.addClass("saveBtn col-1 far fa-save");
+button.attr('data-hour', timeOfDay[i].hour);
 row.append(button);
-
+//Append to row
 $(".container").append(row);
 }
+//Add event listener
+$(document).on('click', function(event) {
+
+    if($(event.target).hasClass('saveBtn')) {
+
+        var dataHour = $(event.target).attr('data-hour');
+
+        console.log(dataHour)
+    }
+})
