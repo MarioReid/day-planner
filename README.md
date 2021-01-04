@@ -31,7 +31,7 @@ Saved Appointment
 ## License
 MIT License
 
-Copyright (c) 2019 Mario Reid
+Copyright (c) 2020 Mario Reid
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
