@@ -6,6 +6,11 @@ This project was to create a simple calendar application that allows a user to s
 
 <a href="https://marioreid.github.io/day-planner"> Click here to visit my deployed project.</a>
 
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 ## Installation
 
 Open webpage using browser of your choice.
