@@ -10,7 +10,7 @@ This project was to create a simple calendar application that allows a user to s
 
 Open webpage using browser of your choice.
 
-## Images
+## Usage
 
 <img src = "frontPage.png" alt = "main page">
 
