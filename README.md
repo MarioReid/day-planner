@@ -17,9 +17,9 @@ This project was to create a simple calendar application that allows a user to s
 Open webpage using browser of your choice.
 
 ## Usage
-
+Main Page
 <img src = "frontPage.png" alt = "main page">
-
+Saved Appointment
 <img src = "savedAppt.png" alt = "page shows save appointment">
 
  ## Credits
